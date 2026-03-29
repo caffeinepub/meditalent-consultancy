@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Deep teal primary: #0F4B5A -> oklch approx */
+    --primary: 35.2 0.082 214.3;
+    --primary-foreground: 100 0 0;
+
+    /* Secondary blue-teal: #2A8BB7 */
+    --secondary: 58.4 0.11 220.5;
+    --secondary-foreground: 100 0 0;
+
+    /* Page background: white */
+    --background: 100 0 0;
+    --foreground: 22.4 0.032 236.6;
+
+    /* Card */
+    --card: 100 0 0;
+    --card-foreground: 22.4 0.032 236.6;
+
+    /* Popover */
+    --popover: 100 0 0;
+    --popover-foreground: 22.4 0.032 236.6;
+
+    /* Muted / alternate section: #EAF4F7 */
+    --muted: 95.2 0.018 212.4;
+    --muted-foreground: 47.3 0.024 230.5;
+
+    /* Accent */
+    --accent: 95.2 0.018 212.4;
+    --accent-foreground: 35.2 0.082 214.3;
+
+    /* Destructive */
+    --destructive: 50 0.22 27;
+    --destructive-foreground: 100 0 0;
+
+    /* Border: #E6EDF1 */
+    --border: 92.4 0.014 218;
+    --input: 92.4 0.014 218;
+    --ring: 35.2 0.082 214.3;
+
+    /* Radius */
+    --radius: 0.5rem;
+
+    /* Chart colors */
+    --chart-1: 35.2 0.082 214.3;
+    --chart-2: 58.4 0.11 220.5;
+    --chart-3: 70 0.1 215;
+    --chart-4: 45 0.08 210;
+    --chart-5: 80 0.07 200;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer utilities {
+  .section-container {
+    @apply max-w-[1200px] mx-auto px-6 md:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20;
+  }
+}
